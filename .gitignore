@@ -1,4 +1,2 @@
-nvim/bin
-nvim/share
+nvim/build/bin
 nvim/neovim
-nvim/lib
