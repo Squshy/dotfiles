@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require "mason-lspconfig".setup {
-        ensure_installed = { "lua_ls", "rust_analyzer" }
+        ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls" }
       }
     end
   },
@@ -17,6 +17,8 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "lspconfig".lua_ls.setup {}
+      require "lspconfig".ts_ls.setup {}
+      require "lspconfig".rust_analyzer.setup {}
 
       -- Format file manually
       vim.keymap.set("n", "<space>f", ":lua vim.lsp.buf.format()<CR>")
