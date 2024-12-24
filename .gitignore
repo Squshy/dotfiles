@@ -1,2 +1,4 @@
 nvim/build/bin
 nvim/neovim
+
+nvm/.nvm
