@@ -1,0 +1,111 @@
+palette = "slink"
+
+format = """
+$shlvl\
+$kubernetes\
+${custom.dir}\
+${custom.home_dir}\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$lua\
+$line_break\
+$jobs\
+$status\
+$character"""
+
+scan_timeout = 10
+
+add_newline = true
+
+[battery]
+disabled = true
+
+[character]
+success_symbol = "[](light-blue)[](medium-blue)[](dark-blue)"
+error_symbol = "[](bright-red)"
+
+[directory]
+truncation_length = 1
+format = "[ $path ]($style)[$read_only]($read_only_style) "
+style = "fg:light-blue bg:gray bold"
+read_only = "  "
+read_only_style = "fg:black bg:red"
+
+[git_branch]
+format = "on [$symbol$branch]($style) "
+style = "fg:purple"
+
+[git_status]
+conflicted = "[<](white)=[$count](bright-white bold)[>](white)"
+ahead = "[<](white)⇡[$count](bright-white bold)[>](white)"
+behind = "[<](white)⇣[$count](bright-white bold)[>](white)"
+diverged = "[<](white)⇕⇡[$ahead_count](bright-white bold)⇣[$behind_count](bright-white)[>](white)"
+untracked = "[<](white)?[$count](bright-white bold)[>](white)"
+stashed = "[<](white)$[$count](bright-white bold)[>](white)"
+modified = "[<](white)![$count](bright-white bold)[>](white)"
+staged = "[<](white)+[$count](bright-white bold)[>](white)"
+renamed = "[<](white)»[$count](bright-white bold)[>](white)"
+deleted = "[<](white)✗[$count](bright-white bold)[>](white)"
+
+[custom.home_dir]
+command = "echo  "
+when = '[ "$PWD" == "$HOME" ]'
+shell = ["bash","--norc","--noprofile"]
+style = "fg:medium-blue bg:#4a4a4a"
+format = "[ $output ]($style)"
+
+[custom.dir]
+command = "echo  "
+when = '[ "$PWD" != "$HOME" ]'
+shell = ["bash","--norc","--noprofile"]
+style = "fg:medium-blue bg:#4a4a4a"
+format = "[ $output ]($style)"
+
+[hostname]
+disabled = true
+
+[palettes.slink]
+light-blue = "#90E0EF"
+medium-blue= "#00B4D8"
+dark-blue = "#0077B6"
+purple = "#9B4D96"
+gray = "#3a3a3a"
