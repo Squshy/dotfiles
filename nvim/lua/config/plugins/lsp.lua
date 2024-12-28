@@ -9,7 +9,13 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require "mason-lspconfig".setup {
-        ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls" }
+        ensure_installed = {
+          "lua_ls",
+          -- rustaceavim says to install this manually cuz installing via
+          -- mason may mess some things up? idk if true but for now I shall listen
+          -- "rust_analyzer",
+          "ts_ls",
+        }
       }
     end
   },
@@ -18,7 +24,7 @@ return {
     config = function()
       require "lspconfig".lua_ls.setup {}
       require "lspconfig".ts_ls.setup {}
-      require "lspconfig".rust_analyzer.setup {}
+      -- require "lspconfig".rust_analyzer.setup {}
 
       -- Format file manually
       vim.keymap.set("n", "<space>f", ":lua vim.lsp.buf.format()<CR>")
