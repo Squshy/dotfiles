@@ -5,3 +5,5 @@ pushd $HOME/.config/nvm/.nvm
 popd
 
 nvm install 20 && nvm use 20
+
+echo "You will want to persist your \$NVM_DIR=$NVM_DIR"

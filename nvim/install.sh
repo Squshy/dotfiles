@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+source $HOME/.config/utils.sh
+
 # Install build dependencies on Ubuntu
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 
@@ -12,10 +15,4 @@ make install
 
 popd
 
-if [[ ":$PATH:" == *":$HOME/nivm/build/bin:"* ]]; then
-  echo "nvim already in path"
-else
-  export PATH="$HOME/nvim/build/bin:$PATH"
-  echo "nvim has been added to path"
-fi
-
+add_to_path "nvim" "$HOME/nivm/build/bin"

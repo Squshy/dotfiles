@@ -31,6 +31,11 @@ and more. Some servers will be installed by default
 but if you require others, you can install, uninstall, or update them through
 the Mason interface using `:Mason`.
 
+#### Telescope
+
+You will want to have `ripgrep` and `fd-find` installed to have this working
+fully, this can be done by running `cargo install fd-find ripgrep`
+
 ### Making Changes
 
 Most of the changes needed will be to the neovim setup which is in the `nvim`
