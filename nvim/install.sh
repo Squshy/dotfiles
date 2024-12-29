@@ -16,4 +16,4 @@ make install
 popd
 popd
 
-add_to_path "nvim" "$HOME/nivm/build/bin"
+add_to_path "nvim" "$HOME/nvim/build/bin"
