@@ -48,3 +48,13 @@ or modify any of the existing plugins.
 
 Install with `cargo install starship` and add `eval "$(starship init bash)"` to
 your `.bashrc` to have it ready to go.
+
+## NVM
+
+Put this in your `.bashrc`:
+
+```bash
+export NVM_DIR="$HOME/nvm/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
