@@ -75,16 +75,19 @@ format = "on [$symbol$branch]($style) "
 style = "fg:purple"
 
 [git_status]
-conflicted = "[<](white)=[$count](bright-white bold)[>](white)"
-ahead = "[<](white)⇡[$count](bright-white bold)[>](white)"
-behind = "[<](white)⇣[$count](bright-white bold)[>](white)"
-diverged = "[<](white)⇕⇡[$ahead_count](bright-white bold)⇣[$behind_count](bright-white)[>](white)"
-untracked = "[<](white)?[$count](bright-white bold)[>](white)"
-stashed = "[<](white)$[$count](bright-white bold)[>](white)"
-modified = "[<](white)![$count](bright-white bold)[>](white)"
-staged = "[<](white)+[$count](bright-white bold)[>](white)"
-renamed = "[<](white)»[$count](bright-white bold)[>](white)"
-deleted = "[<](white)✗[$count](bright-white bold)[>](white)"
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "🏳"
+up_to_date = " "
+untracked = " "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = " "
+modified = " "
+staged = '[++\($count\)](green)'
+renamed = "襁 "
+deleted = " "
 
 [custom.home_dir]
 command = "echo  "
