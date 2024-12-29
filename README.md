@@ -43,3 +43,8 @@ directory. This setup is using [lazy.nvim](https://github.com/folke/lazy.nvim)
 as a package manager. If you want to add new plugins, simply add a new file to
 [`nvim/lua/config/plugins`](https://github.com/Squshy/dotfiles/tree/main/nvim/lua/config/plugins)
 or modify any of the existing plugins.
+
+## Starship
+
+Install with `cargo install starship` and add `eval "$(starship init bash)"` to
+your `.bashrc` to have it ready to go.

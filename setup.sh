@@ -65,7 +65,7 @@ done
 pushd $HOME/.config
 	stow . -t ~ \
 	   --ignore="fonts" \
-	   --ignore="nvm" \
 	   --ignore="utils.sh" \
+	   --ignore="starship.toml" \
 	   --ignore="setup.sh" 
 popd
