@@ -28,10 +28,12 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "williamboman/mason.nvim",
       "stevearc/conform.nvim",
+      "saghen/blink.cmp",
     },
     config = function()
-      require("lspconfig").lua_ls.setup({})
-      require("lspconfig").ts_ls.setup({})
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+      require("lspconfig").ts_ls.setup({ capabilities = capabilities })
     end,
   },
 }

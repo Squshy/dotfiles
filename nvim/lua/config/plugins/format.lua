@@ -7,6 +7,7 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = { "prettierd", "prettier" },
+        typescript = { "prettierd", "prettier" },
         json = { "prettierd", "prettier" },
         -- TODO: prettierd yells at me with an `unexpected export` even tho it
         -- doesn't exist for md files
