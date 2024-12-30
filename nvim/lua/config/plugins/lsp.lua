@@ -34,6 +34,14 @@ return {
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       require("lspconfig").lua_ls.setup({ capabilities = capabilities })
       require("lspconfig").ts_ls.setup({ capabilities = capabilities })
+      require("lspconfig").rust_analyzer.setup({ capabilities = capabilities })
+
+      vim.keymap.set("n", "<space>td", vim.lsp.buf.type_definition)
+      vim.keymap.set("n", "<space>gd", vim.lsp.buf.definition)
+      vim.keymap.set("n", "<space>vrr", vim.lsp.buf.references)
+      vim.keymap.set("n", "<space>vrn", vim.lsp.buf.rename)
+      vim.keymap.set("n", "<space>vca", vim.lsp.buf.code_action)
+      vim.keymap.set("n", "<space>vd", vim.diagnostic.open_float)
     end,
   },
 }
