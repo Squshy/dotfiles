@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
+      { out,                            "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
@@ -27,9 +27,9 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     {
-      "folke/tokyonight.nvim",
+      "rebelot/kanagawa.nvim",
       config = function()
-        vim.cmd.colorscheme("tokyonight")
+        vim.cmd.colorscheme("kanagawa-wave")
       end,
     },
     { import = "config.plugins" },
