@@ -6,3 +6,5 @@ nvm/.nvm
 rust/bin
 
 gh
+
+tmux/plugins

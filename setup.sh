@@ -15,7 +15,7 @@ if ! command -v stow &> /dev/null; then
     fi
 fi
 
-DIRS_WITH_INSTALL_SCRIPT=("fonts" "nvim" "nvm" "rust")
+DIRS_WITH_INSTALL_SCRIPT=("fonts" "nvim" "nvm" "rust", "tmux")
 ARGS=( "$@" )
 DIRS_TO_INSTALL=()
 
@@ -25,7 +25,7 @@ if [[ "${1}" == "--help" ]]; then
 	if you only want to install a subset of directories"
     echo "Pass --ignore followed by a list of directories you wish to ignore from \
 	the basic set of directories"
-    echo "The following are the accepted directories: fonts, nvim, nvm, rust"
+    echo "The following are the accepted directories: fonts, nvim, nvm, rust, tmux"
     if $SOURCED; then
 	return 0
     else 

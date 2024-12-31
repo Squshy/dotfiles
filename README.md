@@ -58,3 +58,12 @@ export NVM_DIR="$HOME/nvm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
+
+## TMUX
+
+Put this in your `.bashrc`:
+
+```bash
+export TMUX_POWERLINE_CONFIG_FILE="$HOME/.config/tmux/powerline/config.sh"
+export TMUX_POWERLINE_CONFIG_DIR="$HOME/.config/tmux/powerline"
+```
