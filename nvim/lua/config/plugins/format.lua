@@ -8,6 +8,8 @@ return {
         lua = { "stylua" },
         javascript = { "prettierd", "prettier" },
         typescript = { "prettierd", "prettier" },
+        typescriptreact = { "prettierd", "prettier" },
+        javascriptreact = { "prettierd", "prettier" },
         json = { "prettierd", "prettier" },
         -- TODO: prettierd yells at me with an `unexpected export` even tho it
         -- doesn't exist for md files
