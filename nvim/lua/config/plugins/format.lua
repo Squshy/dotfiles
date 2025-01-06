@@ -14,6 +14,7 @@ return {
         -- TODO: prettierd yells at me with an `unexpected export` even tho it
         -- doesn't exist for md files
         markdown = { "prettier" },
+        typespec = { "prettierd", "prettier" }
       },
       default_format_opts = {
         lsp_format = "fallback",
