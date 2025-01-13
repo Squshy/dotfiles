@@ -18,6 +18,7 @@ return {
           -- mason may mess some things up? idk if true but for now I shall listen
           -- "rust_analyzer",
           "ts_ls",
+          "pyright",
         },
       })
     end,
@@ -34,6 +35,7 @@ return {
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       require("lspconfig").lua_ls.setup({ capabilities = capabilities })
       require("lspconfig").ts_ls.setup({ capabilities = capabilities })
+      require("lspconfig").pyright.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<space>td", vim.lsp.buf.type_definition)
       vim.keymap.set("n", "<space>gd", vim.lsp.buf.definition)
