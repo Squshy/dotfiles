@@ -14,6 +14,7 @@ return {
         -- TODO: prettierd yells at me with an `unexpected export` even tho it
         -- doesn't exist for md files
         markdown = { "prettier" },
+        html = { "prettier" },
         typespec = { "prettierd", "prettier" },
         python = { "black" }
       },
