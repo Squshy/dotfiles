@@ -36,6 +36,11 @@ return {
       require("lspconfig").lua_ls.setup({ capabilities = capabilities })
       require("lspconfig").ts_ls.setup({ capabilities = capabilities })
       require("lspconfig").pyright.setup({ capabilities = capabilities })
+      require("lspconfig").htmx.setup({
+        filetypes = { "html", "javascriptreact", "typescriptreact" },
+        capabilities = capabilities,
+      })
+      require("lspconfig").html.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "<space>td", vim.lsp.buf.type_definition)
       vim.keymap.set("n", "<space>gd", vim.lsp.buf.definition)
